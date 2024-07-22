@@ -1,0 +1,58 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 60%;
+	height: 20%;
+	label {
+		width: 100%;
+		margin: 10px 0;
+		font-size: 14px;
+		letter-spacing: 2px;
+	}
+	p {
+		width: 100%;
+		font-size: 14px;
+		margin: 10px 0;
+	}
+	.input {
+		width: 80%;
+		height: 40px;
+		min-width: 200px;
+		border-radius: 10px;
+		text-align: center;
+		background: #a1a2a2;
+		border: none;
+		transition: all 0.2s ease-out;
+		&::placeholder,
+		& {
+			color: white;
+		}
+		&:focus {
+			background: #7c7c7c;
+			outline: none;
+		}
+	}
+	.register {
+		color: blue;
+		cursor: pointer;
+	}
+	.loginButton {
+		text-transform: uppercase;
+		width: 80%;
+		min-width: 200px;
+		height: 40px;
+		border-radius: 10px;
+		border: 2px solid white;
+		background-color: transparent;
+		color: white;
+		padding: 7px 14px;
+		cursor: pointer;
+		transition: all 0.2s ease-in;
+	}
+	.loginButton:hover {
+		color: black;
+		background-color: white;
+	}
+}
