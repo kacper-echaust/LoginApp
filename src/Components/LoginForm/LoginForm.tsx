@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react'
-import { useAuthorization } from '../../../../LoginApp2/src/hooks/useAuthorization'
-import { useLogin } from '../../../../LoginApp2/src/hooks/useLogin'
+import { useAuthorization } from '../../hooks/useAuthorization'
+import { useLogin } from '../..//hooks/useLogin'
 import css from './LoginForm.module.scss'
 
 const LoginForm = () => {
