@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useApi } from '../../../LoginApp/src/hooks/useApi'
-import { UserDataType } from './useLogin'
+import { UserDataType } from '../types/hooksType'
 
 const useAuthorization = () => {
 	const [isLogged, setIsLogged] = useState(false)
-	const { data, getDataFromApi } = useApi()
+	const { dataFromApi, getDataFromApi } = useApi()
 
 	useEffect(() => {
 		getDataFromApi()
 	}, [])
 	const checkData = (userData: UserDataType) => {
-		data.map((user: { login: string; password: string }) => {
+		dataFromApi.map((user: { login: string; password: string }) => {
 			if (user.login === userData.login) {
 				if (user.password === userData.password) {
 					setIsLogged(true)
@@ -21,7 +21,7 @@ const useAuthorization = () => {
 	return {
 		isLogged,
 		checkData,
-		setIsLogged
+		setIsLogged,
 	}
 }
 
